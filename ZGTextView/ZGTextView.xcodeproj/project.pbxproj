@@ -16,6 +16,7 @@
 		EFF0C8121C575C7D00C12D7B /* ZGTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C8111C575C7D00C12D7B /* ZGTextViewTests.m */; };
 		EFF0C81D1C575C7D00C12D7B /* ZGTextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C81C1C575C7D00C12D7B /* ZGTextViewUITests.m */; };
 		EFF0C82E1C575CDA00C12D7B /* ZGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C82D1C575CDA00C12D7B /* ZGTextView.m */; settings = {ASSET_TAGS = (); }; };
+		EFF0C8311C57787400C12D7B /* ZGSimpleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C8301C57787400C12D7B /* ZGSimpleTextView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		EFF0C81E1C575C7D00C12D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFF0C82C1C575CDA00C12D7B /* ZGTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTextView.h; sourceTree = "<group>"; };
 		EFF0C82D1C575CDA00C12D7B /* ZGTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTextView.m; sourceTree = "<group>"; };
+		EFF0C82F1C57787400C12D7B /* ZGSimpleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSimpleTextView.h; sourceTree = "<group>"; };
+		EFF0C8301C57787400C12D7B /* ZGSimpleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSimpleTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 			children = (
 				EFF0C82C1C575CDA00C12D7B /* ZGTextView.h */,
 				EFF0C82D1C575CDA00C12D7B /* ZGTextView.m */,
+				EFF0C82F1C57787400C12D7B /* ZGSimpleTextView.h */,
+				EFF0C8301C57787400C12D7B /* ZGSimpleTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 			files = (
 				EFF0C82E1C575CDA00C12D7B /* ZGTextView.m in Sources */,
 				EFF0C7FF1C575C7D00C12D7B /* ViewController.m in Sources */,
+				EFF0C8311C57787400C12D7B /* ZGSimpleTextView.m in Sources */,
 				EFF0C7FC1C575C7D00C12D7B /* AppDelegate.m in Sources */,
 				EFF0C7F91C575C7D00C12D7B /* main.m in Sources */,
 			);
