@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFCB399C1C5E139700EEF7ED /* ZGCursorFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB399B1C5E139700EEF7ED /* ZGCursorFrame.m */; };
 		EFF0C7F91C575C7D00C12D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C7F81C575C7D00C12D7B /* main.m */; };
 		EFF0C7FC1C575C7D00C12D7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C7FB1C575C7D00C12D7B /* AppDelegate.m */; };
 		EFF0C7FF1C575C7D00C12D7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C7FE1C575C7D00C12D7B /* ViewController.m */; };
@@ -15,8 +16,8 @@
 		EFF0C8071C575C7D00C12D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF0C8051C575C7D00C12D7B /* LaunchScreen.storyboard */; };
 		EFF0C8121C575C7D00C12D7B /* ZGTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C8111C575C7D00C12D7B /* ZGTextViewTests.m */; };
 		EFF0C81D1C575C7D00C12D7B /* ZGTextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C81C1C575C7D00C12D7B /* ZGTextViewUITests.m */; };
-		EFF0C82E1C575CDA00C12D7B /* ZGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C82D1C575CDA00C12D7B /* ZGTextView.m */; settings = {ASSET_TAGS = (); }; };
-		EFF0C8311C57787400C12D7B /* ZGSimpleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C8301C57787400C12D7B /* ZGSimpleTextView.m */; settings = {ASSET_TAGS = (); }; };
+		EFF0C82E1C575CDA00C12D7B /* ZGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C82D1C575CDA00C12D7B /* ZGTextView.m */; };
+		EFF0C8311C57787400C12D7B /* ZGSimpleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0C8301C57787400C12D7B /* ZGSimpleTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFCB399A1C5E139700EEF7ED /* ZGCursorFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCursorFrame.h; sourceTree = "<group>"; };
+		EFCB399B1C5E139700EEF7ED /* ZGCursorFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCursorFrame.m; sourceTree = "<group>"; };
 		EFF0C7F41C575C7D00C12D7B /* ZGTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF0C7F81C575C7D00C12D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFF0C7FA1C575C7D00C12D7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFCB39991C5E138400EEF7ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB399A1C5E139700EEF7ED /* ZGCursorFrame.h */,
+				EFCB399B1C5E139700EEF7ED /* ZGCursorFrame.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EFF0C7EB1C575C7D00C12D7B = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +162,7 @@
 		EFF0C82A1C575CC200C12D7B /* ZGTextView */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB39991C5E138400EEF7ED /* Model */,
 				EFF0C82B1C575CC200C12D7B /* View */,
 			);
 			path = ZGTextView;
@@ -296,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCB399C1C5E139700EEF7ED /* ZGCursorFrame.m in Sources */,
 				EFF0C82E1C575CDA00C12D7B /* ZGTextView.m in Sources */,
 				EFF0C7FF1C575C7D00C12D7B /* ViewController.m in Sources */,
 				EFF0C8311C57787400C12D7B /* ZGSimpleTextView.m in Sources */,
@@ -526,6 +540,7 @@
 				EFF0C8231C575C7D00C12D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFF0C8241C575C7D00C12D7B /* Build configuration list for PBXNativeTarget "ZGTextViewTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +549,7 @@
 				EFF0C8261C575C7D00C12D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFF0C8271C575C7D00C12D7B /* Build configuration list for PBXNativeTarget "ZGTextViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +558,7 @@
 				EFF0C8291C575C7D00C12D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

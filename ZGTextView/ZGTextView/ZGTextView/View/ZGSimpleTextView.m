@@ -7,6 +7,16 @@
 //
 
 #import "ZGSimpleTextView.h"
+#import "ZGCursorFrame.h"
+
+@interface ZGSimpleTextView ()
+
+@property (nonatomic, assign) NSInteger displayLinkCount;
+@property (nonatomic, assign) BOOL cursorHidden;
+@property (nonatomic, strong) ZGCursorFrame *cursorFrame;
+@property (nonatomic, assign) NSUInteger cursorSelectedIndex;
+
+@end
 
 @implementation ZGSimpleTextView
 
@@ -17,12 +27,27 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self.font = [UIFont systemFontOfSize:18];
+        self.font = [UIFont systemFontOfSize:15];
         self.textStore = [[NSMutableString alloc] init];
         self.textColor = [UIColor whiteColor];
+        
+        // cursor
+        self.cursorFrame = [ZGCursorFrame cursorFrameWithRect:CGRectMake(5, 3, 1, self.font.lineHeight)];
+        CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(onDisplayLink:)];
+        [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     }
     
     return self;
+}
+
+#pragma mark - onDisplayLink
+- (void)onDisplayLink:(CADisplayLink *)displayLink
+{
+    if (self.displayLinkCount == 30) {
+        [self setNeedsDisplay];
+        self.displayLinkCount = 0;
+    }
+    self.displayLinkCount++;
 }
 
 #pragma mark - <UIKeyInput>
@@ -36,8 +61,9 @@
 
 - (void)insertText:(NSString *)text
 {
-    NSLog(@"text %@",text);
-    [self.textStore appendString:text];
+    [self.textStore insertString:text atIndex:self.cursorSelectedIndex];
+    self.cursorSelectedIndex += text.length;
+    self.cursorFrame.x += [text sizeWithAttributes:@{NSFontAttributeName : self.font}].width;
     [self setNeedsDisplay];
 }
 
@@ -67,6 +93,12 @@
     [self.textColor set];
     [self.textStore drawInRect:self.bounds withAttributes:@{NSFontAttributeName : self.font,
                                                             NSForegroundColorAttributeName : self.textColor}];
+    // cursor
+    self.cursorHidden = !self.cursorHidden;
+    if (self.cursorHidden == NO) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextFillRect(context, self.cursorFrame.cursorRect);
+    }
 }
 
 @end

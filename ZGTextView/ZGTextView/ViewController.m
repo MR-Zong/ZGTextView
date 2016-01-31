@@ -25,6 +25,7 @@
     simpleTextView.frame = CGRectMake(100, 100, 100, 100);
     simpleTextView.backgroundColor = [UIColor redColor];
     [self.view addSubview:simpleTextView];
+
 }
 
 
